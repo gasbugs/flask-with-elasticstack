@@ -1,0 +1,72 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  fieldset {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  legend {
+    font-weight: bold;
+    margin: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0px;
+    height: 25px;
+    margin: 2px;
+  }
+  
+  input[type="checkbox"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 15px;
+  }
+  
+  select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  button {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  button:hover {
+    background-color: #111;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid #ffffff;
+    padding: 5px;
+  }
+  
+  th {
+    width: 50%;
+  }
+  
+  td {
+    width: 50%;
+  }

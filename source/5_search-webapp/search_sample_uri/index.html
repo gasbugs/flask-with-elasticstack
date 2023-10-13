@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>고급 검색</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="/search" method="GET">
+    <fieldset>
+      <legend>다음 기준으로 페이지 검색</legend>
+      <table>
+        <tr>
+          <td>다음 단어 모두 포함</td>
+          <td><input type="text" name="all_words" value=""></td>
+        </tr>
+        <tr>
+          <td>다음 단어 또는 문구 정확하게 포함</td>
+          <td><input type="text" name="exact_phrase" value=""></td>
+        </tr>
+        <tr>
+          <td>다음 단어 중 아무거나 포함</td>
+          <td><input type="text" name="any_words" value=""></td>
+        </tr>
+        <tr>
+          <td>다음 단어 제외</td>
+          <td><input type="text" name="exclude_words" value=""></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>다음 기준으로 검색 결과 좁히기</legend>
+      <table>
+        <tr>
+          <td>언어:</td>
+          <td><select name="language">
+            <option value="all">모든 언어</option>
+            <option value="ko">한국어</option>
+            <option value="en">영어</option>
+            <option value="jp">일본어</option>
+            <option value="cn">중국어</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>지역:</td>
+          <td><select name="region">
+            <option value="all">모든 지역</option>
+            <option value="kr">한국</option>
+            <option value="us">미국</option>
+            <option value="jp">일본</option>
+            <option value="cn">중국</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>최종 업데이트:</td>
+          <td><select name="updated">
+            <option value="all">전체</option>
+            <option value="today">오늘</option>
+            <option value="this_week">이번 주</option>
+            <option value="this_month">이번 달</option>
+            <option value="this_year">올해</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>사이트 또는 도메인</td>
+          <td><input type="text" name="site" placeholder="사이트 또는 도메인"></td>
+        </tr>
+        <tr>
+            <td>검색어 표시 위치:</td>
+            <td><select name="display_location">
+                <option value="all">페이지 전체</option>
+                <option value="title">제목만</option>
+                <option value="body">본문만</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td>파일 형식:</td>
+            <td><select name="file_format">
+                <option value="all">모든 형식</option>
+                <option value="html">HTML</option>
+                <option value="pdf">PDF</option>
+                <option value="docx">DOCX</option>
+                <option value="xlsx">XLSX</option>
+              </select></td>
+        </tr>
+        <tr>
+            <td>사용 권한:</td>
+            <td><select name="license">
+                <option value="none">라이선스로 필터링 안함</option>
+                <option value="cc0">CC0</option>
+                <option value="publicdomain">Public Domain</option>
+                <option value="creativecommons">Creative Commons</option>
+              </select></td>
+        </tr>
+      </table>
+    </fieldset>
+    <button type="submit">검색</button>
+  </form>
+</body>
+</html>

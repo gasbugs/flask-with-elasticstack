@@ -1,0 +1,18 @@
+<h1>변수 출력하기</h1>
+<h3>변수 출력하기: {{name}}</h3>
+
+<h1>if 문 사용하기</h1>
+{% if name %}
+<h3>if 문 사용하기: {{name}}</h3>
+{% else %}
+<h3>if 문 사용하기: None</h3>
+{% endif %}
+
+<h1>for문 출력하기</h1>
+<ul>
+    {% for movie in movies %}
+    <li>{{movie.name}}, {{movie.year}}</li>
+    {% endfor %}
+</ul>
+
+

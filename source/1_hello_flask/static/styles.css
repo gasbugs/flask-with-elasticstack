@@ -1,0 +1,20 @@
+body {
+    background-color: #ff0;
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    color: #E00;
+    font-size: 2em;
+  }
+  
+  .container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  p {
+    color: #0EE;
+    font-size: 1em;
+  }
+ 

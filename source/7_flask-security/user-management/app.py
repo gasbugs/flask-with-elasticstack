@@ -126,16 +126,6 @@ class Users(Resource):
     @jwt_required()
     def put(self):
         """유저 수정"""
-        data = request.json
-
-        full_name = data['full_name']
-        username = data['username']
-        user = User.query.filter_by(username=username).one_or_none()
-
-        user = user
-        user.updated(User(full_name=full_name, username=username))
-
-        return jsonify({'message': 'User updated successfully'})
 
     @jwt_required()
     def delete(self, _id):

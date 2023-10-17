@@ -5,6 +5,7 @@ from app import app
 
 admin_token = ''
 
+
 # 픽스처 기능은 테스트 함수 앞뒤 처리를 담당
 @pytest.fixture
 def client():
@@ -57,3 +58,23 @@ def test_users_get(client):
         {'full_name': 'Ann Takamaki', 'id': 2, 'username': 'panther'},
         {'full_name': 'admin', 'id': 3, 'username': 'admin'},
         {'full_name': 'test_name', 'id': 4, 'username': 'test_user'}]
+
+
+def test_whoami_test_user(client):
+    """test_user 유저로 로그인"""
+    response = client.post("/login",
+                           json={
+                            'username': 'test_user',
+                            'password': 'password'
+                           })
+    assert response.status == '200 OK'
+    assert 'access_token' in response.json.keys()
+    test_user_jwt = response.json['access_token']
+    
+    """test_user 유저 확인"""
+    response = client.get("/whoami",
+                           headers={
+                            'Authorization': f'Bearer {test_user_jwt}'
+                           })
+    assert response.status == '200 OK'
+    assert response.json['username'] == 'test_user'

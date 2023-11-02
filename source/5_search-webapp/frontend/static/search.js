@@ -1,23 +1,23 @@
 // 검색 조건을 JSON으로 변환합니다.
 function getQuery() {
-    return {
-      title: document.querySelector("#title").value,
-      author: document.querySelector("#author").value,
-      category: document.querySelector("#category").value,
-      written: {
-        min: document.querySelector("#written").value,
-        max: document.querySelector("#written2").value,
-      },
-      pages: {
-        min: document.querySelector("#pages").value,
-        max: document.querySelector("#pages2").value,
-      },
-      sell: {
-        min: document.querySelector("#sell").value,
-        max: document.querySelector("#sell2").value,
-      },
-    };
-  }
+  return {
+    title: document.querySelector("#title").value,
+    author: document.querySelector("#author").value,
+    category: document.querySelector("#category").value,
+    written: {
+      min: document.querySelector("#written").value,
+      max: document.querySelector("#written2").value,
+    },
+    pages: {
+      min: document.querySelector("#pages").value,
+      max: document.querySelector("#pages2").value,
+    },
+    sell: {
+      min: document.querySelector("#sell").value,
+      max: document.querySelector("#sell2").value,
+    },
+  };
+}
   
   // 검색 질의를 수행합니다.
   function search() {

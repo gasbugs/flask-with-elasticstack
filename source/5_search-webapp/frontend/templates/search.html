@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>책 검색 결과</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/search.css">
+    </head>
+</html>
+<h1>검색 결과</h1>
+{{count_of_result}} 건 검색됨
+<table>
+    <tr>
+        <td>제목</td><td>저자</td><td>발행일</td><td>카테고리</td>
+    </tr>
+    {% for l in results_list %}
+    <tr>
+        <td>{{l._source.title}}</td><td>{{l._source.author}}</td><td>{{l._source.written}}</td><td>{{l._source.category}}</td>
+    </tr>
+    {% endfor %}
+</table>
